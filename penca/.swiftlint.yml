@@ -1,0 +1,51 @@
+disabled_rules:
+  - trailing_comma
+  - trailing_whitespace
+  - nesting
+
+opt_in_rules:
+  - convenience_type
+  - empty_count
+  - empty_string
+  - fatal_error_message
+  - first_where
+  - last_where
+  - modifier_order
+  - private_action
+  - private_outlet
+  - toggle_bool
+  - unused_private_declaration
+  - anyobject_protocol
+  - file_types_order
+  - type_contents_order
+
+line_length:
+  ignores_comments: true
+  ignores_interpolated_strings: true
+  ignores_urls: true
+  warning: 160
+  error: 200
+
+file_types_order:
+  order:
+    - supporting_type
+    - main_type
+    - extension
+    - preview_provider
+
+type_contents_order:
+  order:
+    - [type_alias, associated_type, subtype]
+    - case
+    - ib_outlet
+    - [type_property, ib_inspectable, instance_property]
+    - [initializer, deinitializer]
+    - view_life_cycle_method
+    - type_method
+    - other_method
+    - ib_action
+    - subscript
+
+excluded:
+  - Pods
+  - Resources

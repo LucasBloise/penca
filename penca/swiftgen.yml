@@ -1,0 +1,15 @@
+xcassets:
+  - inputs: ${PROJECT_DIR}/${PROJECT_NAME}/Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: ${PROJECT_DIR}/${PROJECT_NAME}/Resources/AppAssets.swift
+        params:
+          enumName: Assets
+
+ib:
+  inputs: ${PROJECT_DIR}/${PROJECT_NAME}/Storyboards
+  outputs:
+    - templateName: scenes-swift5
+      output: ${PROJECT_DIR}/${PROJECT_NAME}/Resources/StoryboardScenes.swift
+      params:
+        ignoreTargetModule: true

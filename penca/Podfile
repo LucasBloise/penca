@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'penca' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for penca
+  pod 'IQKeyboardManager', '6.5.10'
+  pod 'Kingfisher', '7.2.4'
+  pod 'SwiftLint', '0.47.1'
+  pod 'SwiftGen', '6.5.1'
+end
+
