@@ -25,7 +25,16 @@ class SignUpViewController: UIViewController {
         let logInVC = StoryboardScene.Main.logInViewController.instantiate()
         show(logInVC, sender: nil)
     }
+    
     @IBAction private func didTapCreate(_ sender: UIButton) {
+        APIClient.shared.postSignUp(userEmail: emailTextField.text ?? "", userPassword: passwordTextField.text ?? "") { apiResponse in
+            switch apiResponse {
+            case .success(let user):
+                SessionManager.shared.setSessionToken(user.token)
+            case .failure(let error):
+                print(error)
+                self.presentError(error)            }
+        }
     }
     
 }

@@ -34,9 +34,8 @@ protocol APIRoute {
     func asURLRequest() throws -> URLRequest
 }
 
-
 extension APIRoute {
-    var baseURL: String { "" } // TODO: Replace with real BaseUrl
+    var baseURL: String { "https://api.penca.inhouse.decemberlabs.com/api/v1" }
     var apiVersion: String { "" }
     var cachePolicy: URLRequest.CachePolicy { .reloadIgnoringLocalAndRemoteCacheData }
     
@@ -56,11 +55,10 @@ extension APIRoute {
         urlRequest.httpMethod = self.method.rawValue
         urlRequest.cachePolicy = self.cachePolicy
         
-        // TODO: Replace with correct authentication
-//        if sessionPolicy == .privateDomain {
-//            guard let token = SessionManager.shared.accessToken else { throw APIError.authenticationError }
-//            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-//        }
+       if sessionPolicy == .privateDomain {
+           guard let token = SessionManager.shared.sessionToken else { throw APIError.authenticationError }
+           urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+       }
         
         if [.post, .put, .delete, .patch].contains(method) {
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")

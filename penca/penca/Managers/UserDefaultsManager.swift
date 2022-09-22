@@ -59,8 +59,7 @@ public class UserDefaultsManager: UserDefaultsManagerProtocol {
 
 extension UserDefaultsManager {
     enum Keys: CaseIterable {
-        // Add user defaults keys here
-        case exampleKey // TODO: Remove the example key
+        case userSessionTokenKey
         
         fileprivate var keyString: String { String(describing: self) }
     }

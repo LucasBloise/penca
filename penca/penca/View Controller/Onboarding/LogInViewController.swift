@@ -19,13 +19,23 @@ class LogInViewController: UIViewController {
         signUpLabel.isUserInteractionEnabled = true
         signUpLabel.addGestureRecognizer(labelTap)
     }
+    
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
         let signUpVC = StoryboardScene.Main.initialScene.instantiate()
         show(signUpVC, sender: nil)
     }
     
     @IBAction private func didTapLogIn(_ sender: UIButton) {
-        
+        APIClient.shared.postLogIn(userEmail: emailTextField.text ?? "", userPassword: passwordTextField.text ?? "") { apiResponse in
+            switch apiResponse {
+            case .success(let user):
+                SessionManager.shared.setSessionToken(user.token)
+            case .failure(let error):
+                print(error)
+                self.presentError(error)
+                
+            }
+        }
     }
     
 }
