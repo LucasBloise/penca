@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
-        let logInVC = StoryboardScene.Main.logInViewController.instantiate()
+        let logInVC = StoryboardScene.Onboarding.logInViewController.instantiate()
         show(logInVC, sender: nil)
     }
     
@@ -31,9 +31,13 @@ class SignUpViewController: UIViewController {
             switch apiResponse {
             case .success(let user):
                 SessionManager.shared.setSessionToken(user.token)
+                let matchesVC = StoryboardScene.Matches.initialScene.instantiate()
+                matchesVC.modalPresentationStyle = .overCurrentContext
+                self.present(matchesVC, animated: true)
             case .failure(let error):
                 print(error)
-                self.presentError(error)            }
+                self.presentError(error)
+            }
         }
     }
     

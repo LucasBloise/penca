@@ -56,7 +56,7 @@ extension APIRoute {
         urlRequest.cachePolicy = self.cachePolicy
         
        if sessionPolicy == .privateDomain {
-           guard let token = SessionManager.shared.sessionToken else { throw APIError.authenticationError }
+           guard let token = SessionManager.shared.getSessionToken() else { throw APIError.authenticationError }
            urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
        }
         

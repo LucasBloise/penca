@@ -21,8 +21,7 @@ class LogInViewController: UIViewController {
     }
     
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
-        let signUpVC = StoryboardScene.Main.initialScene.instantiate()
-        show(signUpVC, sender: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction private func didTapLogIn(_ sender: UIButton) {
@@ -30,6 +29,8 @@ class LogInViewController: UIViewController {
             switch apiResponse {
             case .success(let user):
                 SessionManager.shared.setSessionToken(user.token)
+                let matchesVC = StoryboardScene.Matches.matchesViewController.instantiate()
+                self.show(matchesVC, sender: nil)
             case .failure(let error):
                 print(error)
                 self.presentError(error)

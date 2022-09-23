@@ -12,17 +12,21 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
-
-    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Main.self)
-
-    internal static let logInViewController = SceneType<LogInViewController>(storyboard: Main.self, identifier: "LogInViewController")
-
-    internal static let sigInViewController = SceneType<SignUpViewController>(storyboard: Main.self, identifier: "SigInViewController")
-  }
   internal enum Matches: StoryboardType {
     internal static let storyboardName = "Matches"
+
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Matches.self)
+
+    internal static let matchesViewController = SceneType<MatchesViewController>(storyboard: Matches.self, identifier: "MatchesViewController")
+  }
+  internal enum Onboarding: StoryboardType {
+    internal static let storyboardName = "Onboarding"
+
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Onboarding.self)
+
+    internal static let logInViewController = SceneType<LogInViewController>(storyboard: Onboarding.self, identifier: "LogInViewController")
+
+    internal static let sigInViewController = SceneType<SignUpViewController>(storyboard: Onboarding.self, identifier: "SigInViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
