@@ -12,6 +12,11 @@
 		4AD00ADD28DC843100BC5E55 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00ADC28DC843100BC5E55 /* User.swift */; };
 		4AD00ADF28DC8D2A00BC5E55 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00ADE28DC8D2A00BC5E55 /* SessionManager.swift */; };
 		4AD00AE228DC9FBB00BC5E55 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00AE128DC9FBB00BC5E55 /* MatchesViewController.swift */; };
+		4AD0F2C328E1CD960019CF6D /* Matches+APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2C228E1CD960019CF6D /* Matches+APIClient.swift */; };
+		4AD0F2C528E1CDCB0019CF6D /* Matches+Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2C428E1CDCB0019CF6D /* Matches+Routes.swift */; };
+		4AD0F2C728E1CEA70019CF6D /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2C628E1CEA70019CF6D /* Banners.swift */; };
+		4AD0F2CD28E1D5730019CF6D /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2CB28E1D5730019CF6D /* BannerCollectionViewCell.swift */; };
+		4AD0F2CE28E1D5730019CF6D /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0F2CC28E1D5730019CF6D /* BannerCollectionViewCell.xib */; };
 		4AFB5C9128DB5C4F0040E4B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5C9028DB5C4F0040E4B5 /* AppDelegate.swift */; };
 		4AFB5C9328DB5C4F0040E4B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5C9228DB5C4F0040E4B5 /* SceneDelegate.swift */; };
 		4AFB5C9628DB5C4F0040E4B5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5C9528DB5C4F0040E4B5 /* UserDefaultsManager.swift */; };
@@ -45,6 +50,11 @@
 		4AD00ADC28DC843100BC5E55 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4AD00ADE28DC8D2A00BC5E55 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4AD00AE128DC9FBB00BC5E55 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		4AD0F2C228E1CD960019CF6D /* Matches+APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+APIClient.swift"; sourceTree = "<group>"; };
+		4AD0F2C428E1CDCB0019CF6D /* Matches+Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Matches+Routes.swift"; sourceTree = "<group>"; };
+		4AD0F2C628E1CEA70019CF6D /* Banners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
+		4AD0F2CB28E1D5730019CF6D /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		4AD0F2CC28E1D5730019CF6D /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		4AFB5C8D28DB5C4F0040E4B5 /* penca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = penca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFB5C9028DB5C4F0040E4B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AFB5C9228DB5C4F0040E4B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +115,24 @@
 			path = Matches;
 			sourceTree = "<group>";
 		};
+		4AD0F2C128E1CD680019CF6D /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0F2C228E1CD960019CF6D /* Matches+APIClient.swift */,
+				4AD0F2C428E1CDCB0019CF6D /* Matches+Routes.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		4AD0F2C828E1D5150019CF6D /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				4AD0F2CB28E1D5730019CF6D /* BannerCollectionViewCell.swift */,
+				4AD0F2CC28E1D5730019CF6D /* BannerCollectionViewCell.xib */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
 		4AFB5C8228DB5C4F0040E4B5 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +186,7 @@
 		4AFB5C9728DB5C4F0040E4B5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0F2C128E1CD680019CF6D /* Matches */,
 				4AFB5CD728DBD0810040E4B5 /* Auth */,
 				4AFB5C9828DB5C4F0040E4B5 /* APIError.swift */,
 				4AFB5C9A28DB5C4F0040E4B5 /* APIClient.swift */,
@@ -212,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4AD00ADC28DC843100BC5E55 /* User.swift */,
+				4AD0F2C628E1CEA70019CF6D /* Banners.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +249,7 @@
 		4AFB5CCE28DB60BB0040E4B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4AD0F2C828E1D5150019CF6D /* Matches */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +356,7 @@
 				4AFB5CC028DB5C510040E4B5 /* Assets.xcassets in Resources */,
 				4AFB5CD628DBB5090040E4B5 /* Matches.storyboard in Resources */,
 				4AFB5CBB28DB5C4F0040E4B5 /* Onboarding.storyboard in Resources */,
+				4AD0F2CE28E1D5730019CF6D /* BannerCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,8 +452,10 @@
 				4AD00ADB28DC807200BC5E55 /* Auth+Routes.swift in Sources */,
 				4AFB5CA828DB5C4F0040E4B5 /* UITableView+Utils.swift in Sources */,
 				4AFB5C9928DB5C4F0040E4B5 /* APIError.swift in Sources */,
+				4AD0F2C528E1CDCB0019CF6D /* Matches+Routes.swift in Sources */,
 				4AFB5C9328DB5C4F0040E4B5 /* SceneDelegate.swift in Sources */,
 				4AFB5CD228DBA0D40040E4B5 /* SignUpViewController.swift in Sources */,
+				4AD0F2CD28E1D5730019CF6D /* BannerCollectionViewCell.swift in Sources */,
 				4AFB5CAF28DB5C4F0040E4B5 /* AppAssets.swift in Sources */,
 				4AFB5C9B28DB5C4F0040E4B5 /* APIClient.swift in Sources */,
 				4AD00ADD28DC843100BC5E55 /* User.swift in Sources */,
@@ -434,7 +468,9 @@
 				4AD00AE228DC9FBB00BC5E55 /* MatchesViewController.swift in Sources */,
 				4AFB5CAC28DB5C4F0040E4B5 /* UIViewController+Utils.swift in Sources */,
 				4AFB5C9628DB5C4F0040E4B5 /* UserDefaultsManager.swift in Sources */,
+				4AD0F2C728E1CEA70019CF6D /* Banners.swift in Sources */,
 				4AFB5CB728DB5C4F0040E4B5 /* LaunchScreenViewController.swift in Sources */,
+				4AD0F2C328E1CD960019CF6D /* Matches+APIClient.swift in Sources */,
 				4AFB5CD428DBA12E0040E4B5 /* LogInViewController.swift in Sources */,
 				4AFB5CB128DB5C4F0040E4B5 /* StoryboardScenes.swift in Sources */,
 			);
