@@ -27,7 +27,7 @@
 		4AFB5CAC28DB5C4F0040E4B5 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5CAB28DB5C4F0040E4B5 /* UIViewController+Utils.swift */; };
 		4AFB5CAF28DB5C4F0040E4B5 /* AppAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5CAE28DB5C4F0040E4B5 /* AppAssets.swift */; };
 		4AFB5CB128DB5C4F0040E4B5 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5CB028DB5C4F0040E4B5 /* StoryboardScenes.swift */; };
-		4AFB5CB728DB5C4F0040E4B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5CB628DB5C4F0040E4B5 /* ViewController.swift */; };
+		4AFB5CB728DB5C4F0040E4B5 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5CB628DB5C4F0040E4B5 /* LaunchScreenViewController.swift */; };
 		4AFB5CBB28DB5C4F0040E4B5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB5CB928DB5C4F0040E4B5 /* Onboarding.storyboard */; };
 		4AFB5CBE28DB5C4F0040E4B5 /* penca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5CBC28DB5C4F0040E4B5 /* penca.xcdatamodeld */; };
 		4AFB5CC028DB5C510040E4B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AFB5CBF28DB5C510040E4B5 /* Assets.xcassets */; };
@@ -64,7 +64,7 @@
 		4AFB5CB328DB5C4F0040E4B5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../../Podfile; sourceTree = "<group>"; };
 		4AFB5CB428DB5C4F0040E4B5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../../.swiftlint.yml; sourceTree = "<group>"; };
 		4AFB5CB528DB5C4F0040E4B5 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = swiftgen.yml; path = ../../swiftgen.yml; sourceTree = "<group>"; };
-		4AFB5CB628DB5C4F0040E4B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AFB5CB628DB5C4F0040E4B5 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		4AFB5CBA28DB5C4F0040E4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		4AFB5CBD28DB5C4F0040E4B5 /* penca.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = penca.xcdatamodel; sourceTree = "<group>"; };
 		4AFB5CBF28DB5C510040E4B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				4AFB5CCC28DB605C0040E4B5 /* Models */,
 				4AFB5C9028DB5C4F0040E4B5 /* AppDelegate.swift */,
 				4AFB5C9228DB5C4F0040E4B5 /* SceneDelegate.swift */,
-				4AFB5CB628DB5C4F0040E4B5 /* ViewController.swift */,
+				4AFB5CB628DB5C4F0040E4B5 /* LaunchScreenViewController.swift */,
 				4AFB5CBF28DB5C510040E4B5 /* Assets.xcassets */,
 				4AFB5CC128DB5C510040E4B5 /* LaunchScreen.storyboard */,
 				4AFB5CC428DB5C510040E4B5 /* Info.plist */,
@@ -434,7 +434,7 @@
 				4AD00AE228DC9FBB00BC5E55 /* MatchesViewController.swift in Sources */,
 				4AFB5CAC28DB5C4F0040E4B5 /* UIViewController+Utils.swift in Sources */,
 				4AFB5C9628DB5C4F0040E4B5 /* UserDefaultsManager.swift in Sources */,
-				4AFB5CB728DB5C4F0040E4B5 /* ViewController.swift in Sources */,
+				4AFB5CB728DB5C4F0040E4B5 /* LaunchScreenViewController.swift in Sources */,
 				4AFB5CD428DBA12E0040E4B5 /* LogInViewController.swift in Sources */,
 				4AFB5CB128DB5C4F0040E4B5 /* StoryboardScenes.swift in Sources */,
 			);

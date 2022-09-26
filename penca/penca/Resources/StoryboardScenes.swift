@@ -24,6 +24,8 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Onboarding.self)
 
+    internal static let launchScreenViewController = SceneType<LaunchScreenViewController>(storyboard: Onboarding.self, identifier: "LaunchScreenViewController")
+
     internal static let logInViewController = SceneType<LogInViewController>(storyboard: Onboarding.self, identifier: "LogInViewController")
 
     internal static let sigInViewController = SceneType<SignUpViewController>(storyboard: Onboarding.self, identifier: "SigInViewController")

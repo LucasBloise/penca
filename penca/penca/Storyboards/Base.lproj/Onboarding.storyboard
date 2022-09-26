@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +18,28 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="urr-RU-rNS"/>
+                        <segue destination="z8C-Xn-Cwu" kind="relationship" relationship="rootViewController" id="GI4-Vs-Rk8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZT-8Y-qXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682" y="108"/>
+            <point key="canvasLocation" x="-1112" y="107"/>
+        </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="4Y1-XH-zKB">
+            <objects>
+                <viewController storyboardIdentifier="LaunchScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z8C-Xn-Cwu" customClass="LaunchScreenViewController" customModule="penca" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OIm-M1-jAr">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0Cp-sb-g0G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nqV-pZ-B20"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Neh-eD-CXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="104"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -33,42 +50,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-Y2-xCp">
-                                <rect key="frame" x="143.33333333333334" y="113.00000000000001" width="103.33333333333334" height="37.666666666666671"/>
+                                <rect key="frame" x="143.33333333333334" y="69" width="103.33333333333334" height="37.666666666666657"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear Cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-oI-N49">
-                                <rect key="frame" x="48" y="230.66666666666666" width="122" height="24"/>
+                                <rect key="frame" x="48" y="186.66666666666666" width="122" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJW-sc-sO2">
-                                <rect key="frame" x="48" y="286.66666666666669" width="31" height="15"/>
+                                <rect key="frame" x="48" y="242.66666666666666" width="31" height="14.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                 <color key="textColor" red="0.77647058823529413" green="0.78431372549019607" blue="0.79607843137254897" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-G4-yvt">
-                                <rect key="frame" x="48" y="305.66666666666669" width="294" height="35.333333333333314"/>
+                                <rect key="frame" x="48" y="261.66666666666669" width="294" height="37.333333333333314"/>
                                 <color key="backgroundColor" name="textFieldBackground"/>
                                 <color key="textColor" name="textFieldBackground"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf9-gn-W67">
-                                <rect key="frame" x="48" y="373" width="65" height="15"/>
+                                <rect key="frame" x="48" y="331" width="65" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                 <color key="textColor" red="0.77647058820000003" green="0.7843137255" blue="0.79607843140000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-Gn-D38">
-                                <rect key="frame" x="48" y="392" width="294" height="35.333333333333314"/>
+                                <rect key="frame" x="48" y="350" width="294" height="37.666666666666686"/>
                                 <color key="backgroundColor" name="textFieldBackground"/>
                                 <color key="textColor" name="textFieldBackground"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bll-gt-bhQ">
-                                <rect key="frame" x="47.999999999999993" y="459.33333333333331" width="122.33333333333331" height="47"/>
+                                <rect key="frame" x="47.999999999999993" y="419.66666666666669" width="122.33333333333331" height="47"/>
                                 <color key="tintColor" name="buttonsColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
@@ -85,13 +102,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ya tienes cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udy-zb-FlH">
-                                <rect key="frame" x="48.000000000000007" y="538.33333333333337" width="105.66666666666669" height="15"/>
+                                <rect key="frame" x="48.000000000000007" y="498.66666666666669" width="105.66666666666669" height="15.000000000000057"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-35-i6z">
-                                <rect key="frame" x="154.66666666666666" y="538.33333333333337" width="42" height="15"/>
+                                <rect key="frame" x="154.66666666666666" y="498.66666666666669" width="42" height="15.000000000000057"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.93725490196078431" green="0.84705882352941175" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -143,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="107"/>
+            <point key="canvasLocation" x="628" y="107"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="Jih-0T-DNe">
@@ -265,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYf-Aa-6qN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152" y="107"/>
+            <point key="canvasLocation" x="1498" y="107"/>
         </scene>
     </scenes>
     <resources>
@@ -279,5 +296,8 @@
         <namedColor name="textFieldBackground">
             <color red="0.42745098039215684" green="0.43529411764705883" blue="0.44705882352941179" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

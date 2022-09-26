@@ -20,5 +20,5 @@ class SessionManager {
         try? UserDefaultsManager.shared.getObject(forKey: UserDefaultsManager.Keys.userSessionTokenKey, ofType: String.self)
     }
     
-    fun
+    
 }
