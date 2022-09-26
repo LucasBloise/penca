@@ -15,4 +15,3 @@ class MatchesViewController: UIViewController {
     }
 
 }
-
