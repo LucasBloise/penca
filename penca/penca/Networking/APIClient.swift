@@ -80,7 +80,6 @@ final class APIClient {
         }
     }
     
-    // TODO: Add necessary checks
     private func checkResponse(_ response: HTTPURLResponse?) throws {
         guard let response = response else { throw APIError.noResponse }
         switch response.statusCode {

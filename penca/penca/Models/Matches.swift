@@ -19,8 +19,8 @@ struct Match: Codable {
     let homeTeamName, homeTeamLogo: String
     let awayTeamId: Int
     let awayTeamName, awayTeamLogo, status: String
-    let homeTeamGoals, awayTeamGoals: Int
-
+    let homeTeamGoals, awayTeamGoals: Int?
+    
 }
 
 struct Pagination: Codable {

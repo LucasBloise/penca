@@ -21,6 +21,7 @@ class MatchesViewController: UIViewController {
         collectionView.dataSource = self
         super.viewDidLoad()
         getBanners()
+        getMatches()
     }
     @IBAction private func didChangueBannerPage(_ sender: UIPageControl) {
         self.collectionView.scrollToItem(at: IndexPath(row: sender.currentPage, section: 0), at: .centeredHorizontally, animated: true)
@@ -35,6 +36,17 @@ extension MatchesViewController {
                 self.bannerURLs = banners.bannerURLs
                 self.pageControl.numberOfPages = banners.bannerURLs.count
                 self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func getMatches() {
+        APIClient.shared.getMatches(page: 1, pageSize: 4, teamName: "b", status: "not_predicted", order: "ASC"){ apiResponse in
+            switch apiResponse {
+            case .success(let matches):
+                print(matches)
             case .failure(let error):
                 print(error)
             }
