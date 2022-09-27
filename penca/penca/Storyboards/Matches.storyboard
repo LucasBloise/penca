@@ -90,11 +90,16 @@
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-kl-aFg">
+                                <rect key="frame" x="24" y="478.5" width="366" height="358.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="matchesBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="e14-YE-t9P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="25V-Va-7II"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jNN-kl-aFg" secondAttribute="trailing" constant="24" id="7FK-MS-2W6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GL0-xE-C6n" secondAttribute="trailing" constant="24" id="7vG-l7-mEU"/>
                             <constraint firstItem="yLn-w1-tMq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="9HR-i1-acA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yLn-w1-tMq" secondAttribute="trailing" constant="24" id="ACg-8j-Grg"/>
@@ -102,9 +107,12 @@
                             <constraint firstItem="yLn-w1-tMq" firstAttribute="top" secondItem="Dro-EF-2R6" secondAttribute="bottom" constant="16" id="HyO-DC-1gK"/>
                             <constraint firstItem="9ow-XH-y2X" firstAttribute="top" secondItem="GL0-xE-C6n" secondAttribute="bottom" constant="14" id="ItM-aM-eWQ"/>
                             <constraint firstItem="GL0-xE-C6n" firstAttribute="top" secondItem="e14-YE-t9P" secondAttribute="bottom" constant="24" id="MvM-SI-jQj"/>
+                            <constraint firstItem="jNN-kl-aFg" firstAttribute="top" secondItem="yLn-w1-tMq" secondAttribute="bottom" constant="24" id="NSa-5t-zQf"/>
                             <constraint firstItem="GL0-xE-C6n" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.215402" id="Qex-KK-Tn1"/>
+                            <constraint firstItem="jNN-kl-aFg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="WJL-oh-evR"/>
                             <constraint firstItem="GL0-xE-C6n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Xji-rQ-4bG"/>
                             <constraint firstItem="Dro-EF-2R6" firstAttribute="top" secondItem="9ow-XH-y2X" secondAttribute="bottom" constant="14" id="eFG-cB-Zqt"/>
+                            <constraint firstItem="jNN-kl-aFg" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.4" id="hiY-RQ-Ydp"/>
                             <constraint firstItem="Dro-EF-2R6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="lVO-UB-RVe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="e14-YE-t9P" secondAttribute="top" constant="100" id="nXk-M5-ecn"/>
                             <constraint firstItem="9ow-XH-y2X" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ovq-Ln-1wN"/>
@@ -117,6 +125,7 @@
                     <connections>
                         <outlet property="collectionView" destination="GL0-xE-C6n" id="MSx-g1-7a3"/>
                         <outlet property="pageControl" destination="9ow-XH-y2X" id="Lco-7u-zVa"/>
+                        <outlet property="tableView" destination="jNN-kl-aFg" id="klY-6j-f80"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

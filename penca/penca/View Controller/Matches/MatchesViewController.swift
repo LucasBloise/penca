@@ -11,14 +11,17 @@ class MatchesViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
+    @IBOutlet weak var tableView: UITableView!
     private var bannerURLs: [String] = []
+    private var matches: [Match] = []
     
- 
     
     override func viewDidLoad() {
         collectionView.register(BannerCollectionViewCell.nib(), forCellWithReuseIdentifier: BannerCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         super.viewDidLoad()
         getBanners()
         getMatches()
@@ -46,7 +49,7 @@ extension MatchesViewController {
         APIClient.shared.getMatches(page: 1, pageSize: 4, teamName: "b", status: "not_predicted", order: "ASC"){ apiResponse in
             switch apiResponse {
             case .success(let matches):
-                print(matches)
+                print(matches.matches)
             case .failure(let error):
                 print(error)
             }
@@ -89,6 +92,24 @@ extension MatchesViewController {
         pageControl.currentPage = Int(offSet + horizontalCenter) / Int(width)
     }
     
+}
+
+// MARK: - TableView
+
+extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
+        let sections: NSSet = NSSet(array: sectionsInTable)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        3
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 }
 
 
