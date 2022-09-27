@@ -13,11 +13,12 @@ class MatchesViewController: UIViewController {
     @IBOutlet private weak var pageControl: UIPageControl!
     private var bannerURLs: [String] = []
     
+ 
+    
     override func viewDidLoad() {
         collectionView.register(BannerCollectionViewCell.nib(), forCellWithReuseIdentifier: BannerCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-//        pageControl.customPageControl(dotFillColor: UIColor(named: "pageControlColor")!, dotBorderColor: UIColor(named: "pageControlColor")!, dotBorderWidth: 2)
         super.viewDidLoad()
         getBanners()
     }
@@ -78,13 +79,4 @@ extension MatchesViewController {
     
 }
 
-extension UIPageControl {
-    func customPageControl(dotFillColor: UIColor, dotBorderColor: UIColor, dotBorderWidth: CGFloat) {
-        for (pageIndex, dotView) in self.subviews.enumerated() {
-            dotView.backgroundColor = currentPage == pageIndex ? dotFillColor : .clear
-            dotView.layer.cornerRadius = dotView.frame.size.height / 2
-            dotView.layer.borderColor = dotBorderColor.cgColor
-            dotView.layer.borderWidth = dotBorderWidth
-        }
-    }
-}
+

@@ -17,6 +17,7 @@
 		4AD0F2C728E1CEA70019CF6D /* Banners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2C628E1CEA70019CF6D /* Banners.swift */; };
 		4AD0F2CD28E1D5730019CF6D /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2CB28E1D5730019CF6D /* BannerCollectionViewCell.swift */; };
 		4AD0F2CE28E1D5730019CF6D /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AD0F2CC28E1D5730019CF6D /* BannerCollectionViewCell.xib */; };
+		4AD0F2D028E1EBF20019CF6D /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0F2CF28E1EBF20019CF6D /* Matches.swift */; };
 		4AFB5C9128DB5C4F0040E4B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5C9028DB5C4F0040E4B5 /* AppDelegate.swift */; };
 		4AFB5C9328DB5C4F0040E4B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5C9228DB5C4F0040E4B5 /* SceneDelegate.swift */; };
 		4AFB5C9628DB5C4F0040E4B5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB5C9528DB5C4F0040E4B5 /* UserDefaultsManager.swift */; };
@@ -55,6 +56,7 @@
 		4AD0F2C628E1CEA70019CF6D /* Banners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banners.swift; sourceTree = "<group>"; };
 		4AD0F2CB28E1D5730019CF6D /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AD0F2CC28E1D5730019CF6D /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		4AD0F2CF28E1EBF20019CF6D /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		4AFB5C8D28DB5C4F0040E4B5 /* penca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = penca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFB5C9028DB5C4F0040E4B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AFB5C9228DB5C4F0040E4B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				4AD00ADC28DC843100BC5E55 /* User.swift */,
 				4AD0F2C628E1CEA70019CF6D /* Banners.swift */,
+				4AD0F2CF28E1EBF20019CF6D /* Matches.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				4AD00AD928DC806200BC5E55 /* Auth+APIClient.swift in Sources */,
 				4AFB5CA628DB5C4F0040E4B5 /* UICollectionView+Utils.swift in Sources */,
 				4AFB5CBE28DB5C4F0040E4B5 /* penca.xcdatamodeld in Sources */,
+				4AD0F2D028E1EBF20019CF6D /* Matches.swift in Sources */,
 				4AFB5CA028DB5C4F0040E4B5 /* Logger.swift in Sources */,
 				4AFB5C9D28DB5C4F0040E4B5 /* APIRoute.swift in Sources */,
 				4AFB5CAA28DB5C4F0040E4B5 /* UIView+Utils.swift in Sources */,

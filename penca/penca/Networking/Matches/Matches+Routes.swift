@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 enum MatchesRoute: APIRoute {
     
     case bannersUrl

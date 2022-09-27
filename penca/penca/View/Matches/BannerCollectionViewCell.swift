@@ -16,13 +16,11 @@ class BannerCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    
     func configure( imagerURL: String) {
         imageView.kf.setImage(with: URL(string: "https://\(imagerURL)"))
     }
