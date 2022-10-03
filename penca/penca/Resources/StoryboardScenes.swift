@@ -17,6 +17,8 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Matches.self)
 
+    internal static let matchDetailViewController = SceneType<MatchDetailViewController>(storyboard: Matches.self, identifier: "MatchDetailViewController")
+
     internal static let matchesViewController = SceneType<MatchesViewController>(storyboard: Matches.self, identifier: "MatchesViewController")
   }
   internal enum Onboarding: StoryboardType {

@@ -11,13 +11,15 @@ class MatchesViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     private var bannerURLs: [String] = []
     private var matches: [Match] = []
-    
+    private var tableViewSections: [String] = []
     
     override func viewDidLoad() {
         collectionView.register(BannerCollectionViewCell.nib(), forCellWithReuseIdentifier: BannerCollectionViewCell.identifier)
+        tableView.register(MatchTableViewCell.nib(), forCellReuseIdentifier: MatchTableViewCell.identifier)
+        tableView.register(MatchSectionHeaderView.nib(), forHeaderFooterViewReuseIdentifier: MatchSectionHeaderView.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         tableView.delegate = self
@@ -46,19 +48,21 @@ extension MatchesViewController {
     }
     
     private func getMatches() {
-        APIClient.shared.getMatches(page: 1, pageSize: 4, teamName: "b", status: "not_predicted", order: "ASC"){ apiResponse in
+        APIClient.shared.getMatches(page: 1, pageSize: 4, teamName: "b", status: "not_predicted", order: "ASC") { apiResponse in
             switch apiResponse {
-            case .success(let matches):
-                print(matches.matches)
+            case .success(let matchesResponse):
+                self.matches = matchesResponse.matches
+                self.getSections()
             case .failure(let error):
                 print(error)
             }
         }
     }
+    
 }
 
 // MARK: - Banner Collection View
-extension MatchesViewController: UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension MatchesViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.bannerURLs.count
     }
@@ -78,7 +82,8 @@ extension MatchesViewController: UICollectionViewDataSource,UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
@@ -97,19 +102,61 @@ extension MatchesViewController {
 // MARK: - TableView
 
 extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        2
-        let sections: NSSet = NSSet(array: sectionsInTable)
-        
-    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        tableViewSections.count
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        getSectionItems(section: section).count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: MatchTableViewCell.identifier, for: indexPath) as! MatchTableViewCell
+    
+        let sectionItems = self.getSectionItems(section: indexPath.section)
+        
+        let matchItem = sectionItems[indexPath.row]
+        
+        cell.configure(match: matchItem)
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        250
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        40
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: MatchSectionHeaderView.identifier)  as! MatchSectionHeaderView
+        view.configure(sectionTitle: tableViewSections[section])
+        return view
+    }
+    
+    func getSections() {
+        for match in matches {
+            let index = match.date.index(match.date.startIndex, offsetBy: 10)
+            let formattedDate = match.date[..<index]
+            if !tableViewSections.contains(String(formattedDate)) {
+                tableViewSections.append(String(formattedDate))
+            }
+            tableView.reloadData()
+        }
+    }
+    
+    func getSectionItems(section: Int) -> [Match] {
+        var matchesForSection = [Match]()
+        for match in matches {
+            let index = match.date.index(match.date.startIndex, offsetBy: 10)
+            let formattedDate = match.date[..<index]
+            if formattedDate == tableViewSections[section] {
+                matchesForSection.append(match)
+            }
+        }
+        return matchesForSection
     }
 }
-
-

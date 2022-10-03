@@ -20,10 +20,17 @@ struct Match: Codable {
     let awayTeamId: Int
     let awayTeamName, awayTeamLogo, status: String
     let homeTeamGoals, awayTeamGoals: Int?
+    var getMatchStatus: MatchStatus {
+        return MatchStatus(rawValue: self.status)!
+    }
     
 }
 
 struct Pagination: Codable {
     let page, totalElements, totalPages, pageSize: Int
     let hasMorePages: Bool
+}
+enum MatchStatus: String {
+  case pending, correct, incorrect
+  case notPredicted = "not_predicted"
 }

@@ -23,9 +23,17 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 internal enum Assets {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let buttonsColor = ColorAsset(name: "buttonsColor")
+  internal static let correctBackgroundColor = ColorAsset(name: "correctBackgroundColor")
+  internal static let correctLabelColor = ColorAsset(name: "correctLabelColor")
+  internal static let incorrectBackgroundColor = ColorAsset(name: "incorrectBackgroundColor")
+  internal static let incorrectLabelColor = ColorAsset(name: "incorrectLabelColor")
   internal static let matchesBackgroundColor = ColorAsset(name: "matchesBackgroundColor")
+  internal static let notPlayedBackground = ColorAsset(name: "notPlayedBackground")
+  internal static let notPlayedLabelColor = ColorAsset(name: "notPlayedLabelColor")
   internal static let pageControlColor = ColorAsset(name: "pageControlColor")
   internal static let pencaLogo = ImageAsset(name: "pencaLogo")
+  internal static let pendingBackgroundColor = ColorAsset(name: "pendingBackgroundColor")
+  internal static let pendingLabelColor = ColorAsset(name: "pendingLabelColor")
   internal static let primaryColor = ColorAsset(name: "primaryColor")
   internal static let textFieldBackground = ColorAsset(name: "textFieldBackground")
 }
