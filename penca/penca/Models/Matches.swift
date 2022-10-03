@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Matches: Codable {
+struct Matches: Decodable {
     let matches: [Match]
     let pagination: Pagination
 }
 
-struct Match: Codable {
+struct Match: Decodable {
     let matchId: Int
     let date: String
     let homeTeamId: Int
@@ -26,7 +26,7 @@ struct Match: Codable {
     
 }
 
-struct Pagination: Codable {
+struct Pagination: Decodable {
     let page, totalElements, totalPages, pageSize: Int
     let hasMorePages: Bool
 }

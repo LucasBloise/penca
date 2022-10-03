@@ -83,21 +83,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yLn-w1-tMq">
+                            <searchBar contentMode="redraw" text="Buscar" translatesAutoresizingMaskIntoConstraints="NO" id="yLn-w1-tMq">
                                 <rect key="frame" x="24" y="403.5" width="366" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" name="matchesBackgroundColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-kl-aFg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-kl-aFg">
                                 <rect key="frame" x="24" y="462.5" width="366" height="358.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="afv-pl-qQ5">
-                                        <rect key="frame" x="0.0" y="44.5" width="366" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="366" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afv-pl-qQ5" id="gua-FS-Xpn">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="43.5"/>
@@ -138,6 +138,7 @@
                     <connections>
                         <outlet property="collectionView" destination="GL0-xE-C6n" id="MSx-g1-7a3"/>
                         <outlet property="pageControl" destination="9ow-XH-y2X" id="Lco-7u-zVa"/>
+                        <outlet property="searchBar" destination="yLn-w1-tMq" id="z2L-9e-vFv"/>
                         <outlet property="tableView" destination="jNN-kl-aFg" id="klY-6j-f80"/>
                     </connections>
                 </viewController>

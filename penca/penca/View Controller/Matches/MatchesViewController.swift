@@ -12,6 +12,7 @@ class MatchesViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
     private var bannerURLs: [String] = []
     private var matches: [Match] = []
     private var tableViewSections: [String] = []
@@ -118,17 +119,20 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
         
         let matchItem = sectionItems[indexPath.row]
         
+        cell.isUserInteractionEnabled = false
+    
         cell.configure(match: matchItem)
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        250
+        260
     }
     
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        40
+        14
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -142,7 +146,7 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
             let index = match.date.index(match.date.startIndex, offsetBy: 10)
             let formattedDate = match.date[..<index]
             if !tableViewSections.contains(String(formattedDate)) {
-                tableViewSections.append(String(formattedDate))
+                tableViewSections.append(String(match.date))
             }
             tableView.reloadData()
         }
@@ -151,9 +155,7 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
     func getSectionItems(section: Int) -> [Match] {
         var matchesForSection = [Match]()
         for match in matches {
-            let index = match.date.index(match.date.startIndex, offsetBy: 10)
-            let formattedDate = match.date[..<index]
-            if formattedDate == tableViewSections[section] {
+            if match.date == tableViewSections[section] {
                 matchesForSection.append(match)
             }
         }

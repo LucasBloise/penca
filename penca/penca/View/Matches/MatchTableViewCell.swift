@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+//protocol MatchesDelegate: AnyObject {
+//  func didTapMatchDetails()
+//}
+
 class MatchTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var matchStatusLabel: UILabel!
@@ -40,7 +44,7 @@ class MatchTableViewCell: UITableViewCell {
     }
     @IBAction private func didTouchSeeDetails(_ sender: UIButton) {
         let detailsVC = StoryboardScene.Matches.matchDetailViewController.instantiate()
-//        show(detailsVC, sender: nil)
+        //show(detailsVC, sender: nil)
     }
     
     func configure(match: Match) {
@@ -56,15 +60,21 @@ class MatchTableViewCell: UITableViewCell {
         
         if let awayTeamGoals = match.awayTeamGoals {
             self.awayGoalsLabel.text = String(awayTeamGoals)
-        }else{
+        } else {
             self.awayGoalsLabel.text = "0"
+        }
+        
+        if match.getMatchStatus == MatchStatus.pending {
+            seeMatchDetailsButton.isHidden = true
+        } else {
+            seeMatchDetailsButton.isHidden = false
         }
         
         localImageView.kf.setImage(with: URL(string: "https://\(match.homeTeamLogo)"))
         awayImageView.kf.setImage(with: URL(string: "https://\(match.awayTeamLogo)"))
         
         if match.status != "pending" {
-            seeMatchDetailsButton.isHidden = false
+        seeMatchDetailsButton.isHidden = false
         }
     }
     
