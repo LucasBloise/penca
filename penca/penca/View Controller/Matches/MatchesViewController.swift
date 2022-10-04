@@ -18,9 +18,9 @@ class MatchesViewController: UIViewController {
     private var tableViewSections: [String] = []
     
     override func viewDidLoad() {
-        collectionView.register(BannerCollectionViewCell.nib(), forCellWithReuseIdentifier: BannerCollectionViewCell.identifier)
-        tableView.register(MatchTableViewCell.nib(), forCellReuseIdentifier: MatchTableViewCell.identifier)
-        tableView.register(MatchSectionHeaderView.nib(), forHeaderFooterViewReuseIdentifier: MatchSectionHeaderView.identifier)
+        collectionView.register(BannerCollectionViewCell.self)
+        tableView.register(MatchTableViewCell.self)
+        tableView.registerHeaderFooterView(MatchSectionHeaderView.self)
         collectionView.delegate = self
         collectionView.dataSource = self
         tableView.delegate = self
@@ -28,6 +28,7 @@ class MatchesViewController: UIViewController {
         super.viewDidLoad()
         getBanners()
         getMatches()
+
     }
     @IBAction private func didChangueBannerPage(_ sender: UIPageControl) {
         self.collectionView.scrollToItem(at: IndexPath(row: sender.currentPage, section: 0), at: .centeredHorizontally, animated: true)
@@ -69,8 +70,7 @@ extension MatchesViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     // swiftlint:disable force_cast
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.identifier, for: indexPath) as! BannerCollectionViewCell
+        let cell = collectionView.dequeueCell(BannerCollectionViewCell.self, forIndexPath: indexPath)
         let banner = self.bannerURLs[indexPath.row]
         cell.configure(imagerURL: banner)
         return cell
@@ -113,14 +113,14 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MatchTableViewCell.identifier, for: indexPath) as! MatchTableViewCell
-    
+        
+        let cell = tableView.dequeueCell(MatchTableViewCell.self, forIndexPath: indexPath)
+      
         let sectionItems = self.getSectionItems(section: indexPath.section)
         
         let matchItem = sectionItems[indexPath.row]
-        
-        cell.isUserInteractionEnabled = false
     
+        cell.delegate = self
         cell.configure(match: matchItem)
 
         return cell
@@ -136,7 +136,7 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: MatchSectionHeaderView.identifier)  as! MatchSectionHeaderView
+        let view = tableView.dequeueHeaderFooterView(MatchSectionHeaderView.self)
         view.configure(sectionTitle: tableViewSections[section])
         return view
     }
@@ -160,5 +160,12 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
         return matchesForSection
+    }
+}
+extension MatchesViewController: MatchTableViewCellDelegate {
+    func didTapMatchDetails() {
+        let detailsVC = StoryboardScene.Matches.matchDetailViewController.instantiate()
+        show(detailsVC, sender: nil)
+        
     }
 }

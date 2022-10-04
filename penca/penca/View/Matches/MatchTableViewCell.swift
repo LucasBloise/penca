@@ -8,9 +8,9 @@
 import UIKit
 import Kingfisher
 
-//protocol MatchesDelegate: AnyObject {
-//  func didTapMatchDetails()
-//}
+protocol MatchTableViewCellDelegate: AnyObject {
+  func didTapMatchDetails()
+}
 
 class MatchTableViewCell: UITableViewCell {
     
@@ -26,6 +26,11 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet private weak var statusLabelView: UIView!
     @IBOutlet private weak var borderView: UIView!
     static let identifier = "MatchTableViewCell"
+    weak var delegate: MatchTableViewCellDelegate?
+    
+    @IBAction private func didTouchSeeDetails(_ sender: UIButton) {
+        delegate?.didTapMatchDetails()
+    }
     
     static func nib() -> UINib {
         return UINib(nibName: self.identifier, bundle: nil)
@@ -33,6 +38,7 @@ class MatchTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
       // contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0))
+        selectionStyle = .none
         statusBackgroundView.layer.borderWidth = 1
         statusBackgroundView.layer.borderColor = UIColor(named: "pendingBackgroundColor")?.cgColor
         statusBackgroundView.layer.cornerRadius = 4
@@ -41,10 +47,6 @@ class MatchTableViewCell: UITableViewCell {
         borderView.layer.borderColor = UIColor(named: "pendingBackgroundColor")?.cgColor
         borderView.layer.cornerRadius = 4
         super.awakeFromNib()
-    }
-    @IBAction private func didTouchSeeDetails(_ sender: UIButton) {
-        let detailsVC = StoryboardScene.Matches.matchDetailViewController.instantiate()
-        //show(detailsVC, sender: nil)
     }
     
     func configure(match: Match) {

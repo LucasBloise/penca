@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AADEBCD28E66FC5006DCAE2 /* MatchSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeader.xib */; };
-		4AADEBCF28E676AD006DCAE2 /* MatchSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AADEBCE28E676AD006DCAE2 /* MatchSectionHeader.swift */; };
+		4AADEBCD28E66FC5006DCAE2 /* MatchSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeaderView.xib */; };
+		4AADEBCF28E676AD006DCAE2 /* MatchSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AADEBCE28E676AD006DCAE2 /* MatchSectionHeaderView.swift */; };
 		4AD00AD928DC806200BC5E55 /* Auth+APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00AD828DC806200BC5E55 /* Auth+APIClient.swift */; };
 		4AD00ADB28DC807200BC5E55 /* Auth+Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00ADA28DC807200BC5E55 /* Auth+Routes.swift */; };
 		4AD00ADD28DC843100BC5E55 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00ADC28DC843100BC5E55 /* User.swift */; };
@@ -51,8 +51,8 @@
 
 /* Begin PBXFileReference section */
 		2C55E87B6A02351241B47C22 /* Pods_penca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_penca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSectionHeader.xib; sourceTree = "<group>"; };
-		4AADEBCE28E676AD006DCAE2 /* MatchSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSectionHeader.swift; sourceTree = "<group>"; };
+		4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSectionHeaderView.xib; sourceTree = "<group>"; };
+		4AADEBCE28E676AD006DCAE2 /* MatchSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSectionHeaderView.swift; sourceTree = "<group>"; };
 		4AD00AD828DC806200BC5E55 /* Auth+APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+APIClient.swift"; sourceTree = "<group>"; };
 		4AD00ADA28DC807200BC5E55 /* Auth+Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+Routes.swift"; sourceTree = "<group>"; };
 		4AD00ADC28DC843100BC5E55 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 				4AD0F2CC28E1D5730019CF6D /* BannerCollectionViewCell.xib */,
 				4AD0F2D128E477820019CF6D /* MatchTableViewCell.swift */,
 				4AD0F2D228E477820019CF6D /* MatchTableViewCell.xib */,
-				4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeader.xib */,
-				4AADEBCE28E676AD006DCAE2 /* MatchSectionHeader.swift */,
+				4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeaderView.xib */,
+				4AADEBCE28E676AD006DCAE2 /* MatchSectionHeaderView.swift */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 				4AFB5CC028DB5C510040E4B5 /* Assets.xcassets in Resources */,
 				4AFB5CD628DBB5090040E4B5 /* Matches.storyboard in Resources */,
 				4AFB5CBB28DB5C4F0040E4B5 /* Onboarding.storyboard in Resources */,
-				4AADEBCD28E66FC5006DCAE2 /* MatchSectionHeader.xib in Resources */,
+				4AADEBCD28E66FC5006DCAE2 /* MatchSectionHeaderView.xib in Resources */,
 				4AD0F2CE28E1D5730019CF6D /* BannerCollectionViewCell.xib in Resources */,
 				4AD0F2D428E477820019CF6D /* MatchTableViewCell.xib in Resources */,
 			);
@@ -494,7 +494,7 @@
 				4AFB5CB728DB5C4F0040E4B5 /* LaunchScreenViewController.swift in Sources */,
 				4AD0F2C328E1CD960019CF6D /* Matches+APIClient.swift in Sources */,
 				4AFB5CD428DBA12E0040E4B5 /* LogInViewController.swift in Sources */,
-				4AADEBCF28E676AD006DCAE2 /* MatchSectionHeader.swift in Sources */,
+				4AADEBCF28E676AD006DCAE2 /* MatchSectionHeaderView.swift in Sources */,
 				4AD0F2D628E490DC0019CF6D /* MatchDetailViewController.swift in Sources */,
 				4AFB5CB128DB5C4F0040E4B5 /* StoryboardScenes.swift in Sources */,
 			);
