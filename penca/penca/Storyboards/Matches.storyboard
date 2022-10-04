@@ -17,6 +17,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vsa-bn-i1p">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="nJN-Uk-wHu"/>
@@ -146,42 +149,31 @@
             </objects>
             <point key="canvasLocation" x="85.507246376811594" y="114.50892857142857"/>
         </scene>
-        <!--Match Detail View Controller-->
+        <!--Detalle Partido-->
         <scene sceneID="6yV-Xq-BeD">
             <objects>
-                <viewController restorationIdentifier="MatchDetailViewController" storyboardIdentifier="MatchDetailViewController" id="m5E-tD-FOt" customClass="MatchDetailViewController" customModule="penca" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MatchDetailViewController" storyboardIdentifier="MatchDetailViewController" title="Detalle Partido" id="m5E-tD-FOt" customClass="MatchDetailViewController" customModule="penca" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i7n-bZ-yPx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnQ-cI-CYS" userLabel="AppBar">
-                                <rect key="frame" x="0.0" y="-56" width="414" height="125.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle de Partido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqe-q7-RYB">
-                                        <rect key="frame" x="115" y="96" width="184.5" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="primaryColor"/>
-                                <constraints>
-                                    <constraint firstItem="oqe-q7-RYB" firstAttribute="top" secondItem="SnQ-cI-CYS" secondAttribute="top" constant="96" id="DS7-V2-tr6"/>
-                                    <constraint firstItem="oqe-q7-RYB" firstAttribute="centerX" secondItem="SnQ-cI-CYS" secondAttribute="centerX" id="ZiY-E2-nEU"/>
-                                    <constraint firstAttribute="bottom" secondItem="oqe-q7-RYB" secondAttribute="bottom" constant="1.5" id="d78-sp-l6J"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jT3-FJ-JF5" userLabel="matchStatus">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W8n-fs-f4j"/>
                         <color key="backgroundColor" name="matchesBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SnQ-cI-CYS" firstAttribute="leading" secondItem="W8n-fs-f4j" secondAttribute="leading" id="53H-aw-VBE"/>
-                            <constraint firstItem="SnQ-cI-CYS" firstAttribute="height" secondItem="i7n-bZ-yPx" secondAttribute="height" multiplier="0.14" id="CLH-Ci-W1G"/>
-                            <constraint firstItem="W8n-fs-f4j" firstAttribute="top" secondItem="SnQ-cI-CYS" secondAttribute="top" constant="100" id="E7A-vV-Jhe"/>
-                            <constraint firstItem="W8n-fs-f4j" firstAttribute="trailing" secondItem="SnQ-cI-CYS" secondAttribute="trailing" id="ivx-O0-itp"/>
+                            <constraint firstItem="jT3-FJ-JF5" firstAttribute="top" secondItem="W8n-fs-f4j" secondAttribute="top" id="BJm-ei-3T8"/>
+                            <constraint firstItem="jT3-FJ-JF5" firstAttribute="height" secondItem="i7n-bZ-yPx" secondAttribute="height" multiplier="0.0580357" id="NkB-4T-LcT"/>
+                            <constraint firstItem="W8n-fs-f4j" firstAttribute="trailing" secondItem="jT3-FJ-JF5" secondAttribute="trailing" id="UgO-Ag-pwN"/>
+                            <constraint firstItem="jT3-FJ-JF5" firstAttribute="leading" secondItem="W8n-fs-f4j" secondAttribute="leading" id="ai6-jN-H9t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RTx-IH-uFv"/>
+                    <navigationItem key="navigationItem" title="Detalle Partido" id="RTx-IH-uFv">
+                        <barButtonItem key="backBarButtonItem" title="  " id="D90-Ds-k82"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPe-yu-gru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

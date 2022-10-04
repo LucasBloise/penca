@@ -13,6 +13,7 @@ class MatchesViewController: UIViewController {
     @IBOutlet private weak var pageControl: UIPageControl!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var headerView: UIView!
     private var bannerURLs: [String] = []
     private var matches: [Match] = []
     private var tableViewSections: [String] = []
@@ -21,6 +22,7 @@ class MatchesViewController: UIViewController {
         collectionView.register(BannerCollectionViewCell.self)
         tableView.register(MatchTableViewCell.self)
         tableView.registerHeaderFooterView(MatchSectionHeaderView.self)
+        tableView.tableHeaderView = headerView
         collectionView.delegate = self
         collectionView.dataSource = self
         tableView.delegate = self
@@ -28,6 +30,8 @@ class MatchesViewController: UIViewController {
         super.viewDidLoad()
         getBanners()
         getMatches()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
     }
     @IBAction private func didChangueBannerPage(_ sender: UIPageControl) {
@@ -50,7 +54,7 @@ extension MatchesViewController {
     }
     
     private func getMatches() {
-        APIClient.shared.getMatches(page: 1, pageSize: 4, teamName: "b", status: "not_predicted", order: "ASC") { apiResponse in
+        APIClient.shared.getMatches(page: 1, pageSize: 6, teamName: "", status: "not_predicted", order: "ASC") { apiResponse in
             switch apiResponse {
             case .success(let matchesResponse):
                 self.matches = matchesResponse.matches
@@ -163,8 +167,9 @@ extension MatchesViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 extension MatchesViewController: MatchTableViewCellDelegate {
-    func didTapMatchDetails() {
+    func didTapMatchDetails(matchId: Int) {
         let detailsVC = StoryboardScene.Matches.matchDetailViewController.instantiate()
+        detailsVC.matchId = matchId
         show(detailsVC, sender: nil)
         
     }

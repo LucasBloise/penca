@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A9B8D0328ECCA71000CC3FE /* MatchDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9B8D0228ECCA71000CC3FE /* MatchDetail.swift */; };
 		4AADEBCD28E66FC5006DCAE2 /* MatchSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeaderView.xib */; };
 		4AADEBCF28E676AD006DCAE2 /* MatchSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AADEBCE28E676AD006DCAE2 /* MatchSectionHeaderView.swift */; };
 		4AD00AD928DC806200BC5E55 /* Auth+APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD00AD828DC806200BC5E55 /* Auth+APIClient.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		2C55E87B6A02351241B47C22 /* Pods_penca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_penca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A9B8D0228ECCA71000CC3FE /* MatchDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetail.swift; sourceTree = "<group>"; };
 		4AADEBCC28E66FC5006DCAE2 /* MatchSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchSectionHeaderView.xib; sourceTree = "<group>"; };
 		4AADEBCE28E676AD006DCAE2 /* MatchSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchSectionHeaderView.swift; sourceTree = "<group>"; };
 		4AD00AD828DC806200BC5E55 /* Auth+APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Auth+APIClient.swift"; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				4AD00ADC28DC843100BC5E55 /* User.swift */,
 				4AD0F2C628E1CEA70019CF6D /* Banners.swift */,
 				4AD0F2CF28E1EBF20019CF6D /* Matches.swift */,
+				4A9B8D0228ECCA71000CC3FE /* MatchDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				4AD0F2D328E477820019CF6D /* MatchTableViewCell.swift in Sources */,
 				4AD0F2C528E1CDCB0019CF6D /* Matches+Routes.swift in Sources */,
 				4AFB5C9328DB5C4F0040E4B5 /* SceneDelegate.swift in Sources */,
+				4A9B8D0328ECCA71000CC3FE /* MatchDetail.swift in Sources */,
 				4AFB5CD228DBA0D40040E4B5 /* SignUpViewController.swift in Sources */,
 				4AD0F2CD28E1D5730019CF6D /* BannerCollectionViewCell.swift in Sources */,
 				4AFB5CAF28DB5C4F0040E4B5 /* AppAssets.swift in Sources */,

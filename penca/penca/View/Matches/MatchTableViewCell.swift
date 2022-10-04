@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 protocol MatchTableViewCellDelegate: AnyObject {
-  func didTapMatchDetails()
+    func didTapMatchDetails(matchId: Int)
 }
 
 class MatchTableViewCell: UITableViewCell {
@@ -27,9 +27,10 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet private weak var borderView: UIView!
     static let identifier = "MatchTableViewCell"
     weak var delegate: MatchTableViewCellDelegate?
+    private var match: Match?
     
     @IBAction private func didTouchSeeDetails(_ sender: UIButton) {
-        delegate?.didTapMatchDetails()
+        delegate?.didTapMatchDetails(matchId: match!.matchId)
     }
     
     static func nib() -> UINib {
@@ -50,6 +51,7 @@ class MatchTableViewCell: UITableViewCell {
     }
     
     func configure(match: Match) {
+        self.match = match
         self.matchStatusLabel.text = getMatchStatusText(status: match.getMatchStatus)
         setStatusColors(status: match.getMatchStatus)
         self.localNameLabel.text = match.homeTeamName

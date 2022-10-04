@@ -9,7 +9,7 @@ import UIKit
 
 class MatchSectionHeaderView: UITableViewHeaderFooterView {
 
-    @IBOutlet weak private var sectionLabel: UILabel!
+    @IBOutlet private weak var sectionLabel: UILabel!
     static let identifier = "MatchSectionHeader"
     
     static func nib() -> UINib {

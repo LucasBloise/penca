@@ -19,7 +19,7 @@ extension UITableViewCell: ReusableView {}
 extension UITableViewHeaderFooterView: ReusableView {}
 
 extension UITableView {
-    //swiftlint:disable force_cast
+    // swiftlint:disable force_cast
     func dequeueCell<T: UITableViewCell>(_ cellType: T.Type, forIndexPath indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath) as! T
     }

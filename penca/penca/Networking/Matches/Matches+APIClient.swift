@@ -17,9 +17,9 @@ extension APIClient {
                     onCompletion: onCompletion)
     }
     
-    func getMatches2(page: Int, pageSize: Int, teamName: String, status: String, order: String, onCompletion: @escaping (Result<JSONDictionary, APIError>) -> Void) {
-        request(MatchesRoute.matches(["page": page, "pageSize": pageSize, "teamName": teamName, "status": status, "order": order]),
-                    onCompletion: onCompletion)
+    func getMatchDetail(matchId: Int,onCompletion: @escaping (Result<MatchDetail, APIError>) -> Void) {
+        requestItem(MatchesRoute.matchDetail(matchId: matchId), onCompletion: onCompletion)
     }
+    
 
 }
